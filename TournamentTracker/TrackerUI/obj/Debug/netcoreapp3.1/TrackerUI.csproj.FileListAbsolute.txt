@@ -1,0 +1,15 @@
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.exe
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.deps.json
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.runtimeconfig.json
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.runtimeconfig.dev.json
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.dll
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\bin\Debug\netcoreapp3.1\TrackerUI.pdb
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.csprojAssemblyReference.cache
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.TournamentViewerForm.resources
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.csproj.GenerateResource.cache
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.AssemblyInfoInputs.cache
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.AssemblyInfo.cs
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.csproj.CoreCompileInputs.cache
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.dll
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.pdb
+C:\Users\sander\Documents\GitHub\tournament-tracker\TournamentTracker\TrackerUI\obj\Debug\netcoreapp3.1\TrackerUI.genruntimeconfig.cache
