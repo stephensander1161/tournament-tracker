@@ -4,6 +4,8 @@ using System.Text;
 using TrackerLibrary.Models;
 using TrackerLibrary.DataAccess.TextHelpers;
 using System.Linq;
+using System.Data;
+using Dapper;
 
 namespace TrackerLibrary.DataAccess
 {
@@ -11,6 +13,7 @@ namespace TrackerLibrary.DataAccess
     {
         private const string PrizesFile = "PrizeModels.csv";
         private const string PeopleFile = "PersonModels.csv";
+        private const string TeamFile = "TeamModels.csv";
 
 
 
@@ -58,6 +61,35 @@ namespace TrackerLibrary.DataAccess
             prizes.SaveToPrizeFile(PrizesFile);
 
             return model;
+        }
+
+        public TeamModel CreateTeam(TeamModel model)
+        {
+            List<TeamModel> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeamModels(PeopleFile);
+
+            int currentId = 1;
+
+            if (teams.Count > 0)
+            {
+                currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+            teams.Add(model);
+
+            teams.SaveToTeamFile(TeamFile);
+
+            return model;
+        }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+        }
+
+        public List<TeamModel> GetTeam_All()
+        {
+            throw new NotImplementedException();
         }
     }
 }
