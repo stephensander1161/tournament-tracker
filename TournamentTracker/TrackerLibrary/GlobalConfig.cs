@@ -1,28 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
+using TrackerLibrary.DataAccess;
 
 namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; }
+        public static IDataConnection Connection { get; private set; } 
 
-        public static void InitializeConnections(bool database, bool textFiles)
+        public static void InitializeConnections(DatabaseType db)
         {
-            if (database)
+      
+            if (db == DatabaseType.Sql)
             {
 
-                // TODO - create the sql connection
+                // TODO - setup the sql connection properly
+                SqlConnector sql = new SqlConnector();
+                Connection = sql;
 
             }
 
-            if (textFiles)
+            else if (db == DatabaseType.TextFile)
             {
                 //TODO - create the text connection
 
+                TextConnector text = new TextConnector();
+                Connection = text; 
 
             }
+        }
+
+        public static string CnnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
