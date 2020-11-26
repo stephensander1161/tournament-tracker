@@ -110,8 +110,6 @@ namespace TrackerUI
                 WireUpLists();
             }
 
-
-
         }
 
         private void createTournamentButton_Click(object sender, EventArgs e)
@@ -139,7 +137,7 @@ namespace TrackerUI
             tm.EnteredTeams = selectedTeams;
 
             //wire up our matchups
-
+            TournamentLogic.CreateRounds(tm);
 
             //create tournament entry
             //create all of the prizes entries

@@ -91,6 +91,7 @@ namespace TrackerLibrary.DataAccess
                 SaveTournament(connection, model);
                 SaveTournamentPrizes(connection, model);
                 SaveTournamentEntries(connection, model);
+                SaveTournamentRounds(connection, model);
             }
             
         }
@@ -134,7 +135,43 @@ namespace TrackerLibrary.DataAccess
 
         }
 
+        private void SaveTournamentRounds(IDbConnection connection, TournamentModel model)
+        {
+            //save list of a list of matchup model
+            //list of matchup entry model entries
 
+            //loop through the rounds
+            //loop through the matchups
+            //save the matchup
+            //loop through the entries and save them. 
+
+            foreach (List<MatchupModel> round in model.Rounds)
+            {
+                foreach (MatchupModel matchup in round)
+                {
+                    var p = new DynamicParameters();
+                    p.Add("@TournamentId", model.Id);
+                    p.Add("@MatchupRound", matchup.MatchupRound);
+                    p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spMatchups_insert", p, commandType: CommandType.StoredProcedure);
+
+                    matchup.Id = p.Get<int>("@id");
+
+                    foreach (MatchupEntryModel entry in matchup.Entries)
+                    {
+                        //var p = new DynamicParameters();
+                        //p.Add("@TournamentId", model.Id);
+                        //p.Add("@MatchupRound", matchup.MatchupRound);
+                        //p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                        //connection.Execute("dbo.spMatchups_insert", p, commandType: CommandType.StoredProcedure);
+
+                    }
+
+                }
+            }
+        }
 
         public List<PersonModel> GetPerson_All()
         {
